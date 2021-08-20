@@ -49,6 +49,10 @@ class List
         puts "-----------------------------------------"
         puts "Index  |  Item             | Deadline    "
         puts "-----------------------------------------"
+        (0...size).each do |i|
+            puts "#{i}" + "  |  " + "#{self[i].title}" + " | " + "#{self[i].deadline}"
+        end
+        puts "-----------------------------------------"
     end
 
 end
