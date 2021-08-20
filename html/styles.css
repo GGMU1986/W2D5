@@ -1,0 +1,59 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.ingredients-list {
+    list-style: square;
+}
+
+nav ol {
+    list-style:lower-greek ;
+
+}
+
+nav ol li:nth-child(odd) {
+    background-color: lightgrey;   
+}
+
+nav ol li:nth-child(even) {
+    background-color:rgb(159, 164, 169);   
+}
+
+header > img {
+    width: 100px
+}
+
+header nav ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#reviews {
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.hero {
+    cursor: pointer;
+    outline: none;
+}
+
+button {
+    background-color: gold;
+}
+
+button:hover {
+    background-color:rgb(149, 169, 78);
+    color: ghostwhite;
+}
+
