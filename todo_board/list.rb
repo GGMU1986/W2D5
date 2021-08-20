@@ -78,4 +78,20 @@ class List
         true
     end
 
+    def down(idx, amount)
+        return false if !valid_index?(idx)
+        i = idx
+        count = 0
+        while count < amount
+            swap(i, i + 1)
+            count += 1
+            i += 1
+        end
+        true
+    end
+
+    def sort_by_date!
+        @items.sort_by! { |item| item.deadline }
+    end
+
 end
