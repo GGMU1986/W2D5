@@ -50,9 +50,32 @@ class List
         puts "Index  |  Item             | Deadline    "
         puts "-----------------------------------------"
         (0...size).each do |i|
-            puts "#{i}" + "  |  " + "#{self[i].title}" + " | " + "#{self[i].deadline}"
+            puts "  #{i}" + "    | " + "#{self[i].title}".ljust(17) + " | " + "#{self[i].deadline}"
         end
         puts "-----------------------------------------"
+    end
+
+    def print_full_item(idx)
+        puts "----------------------------------------------"
+        puts " #{self[idx].title}".ljust(25) + " #{self[idx].deadline}"
+        puts " #{self[idx].description}"
+        puts "----------------------------------------------"
+    end
+
+    def print_priority
+        print_full_item(0)
+    end
+
+    def up(idx, amount)
+        return false if !valid_index?(idx)
+        i = idx
+        count = 0
+        while count < amount
+            swap(i - 1, i)
+            count += 1
+            i -= 1
+        end
+        true
     end
 
 end
